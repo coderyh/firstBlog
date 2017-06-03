@@ -35,7 +35,7 @@
     {% empty %}
         <p>No comments here yet :(</p>
     {% endfor %}
-    {% if post.approved_comments.count == 0 %}
+    {% if post.approved_comments.count == 0 and post.comments.count %}
         <p>{{ post.moderating.count }}条评论审核中</p>
     {% endif %}
 {% endblock %}
