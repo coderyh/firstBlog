@@ -22,7 +22,7 @@ class Post(models.Model):
     def moderating(self):
         return self.comments.filter(approved_comment=False)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.title
 
 
@@ -39,5 +39,5 @@ class Comment(models.Model):
         self.approved_comment = True
         self.save()
 
-    def __str__(self):
+    def __unicode__(self):
         return self.text
